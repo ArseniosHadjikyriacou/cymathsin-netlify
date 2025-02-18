@@ -82,7 +82,7 @@ const NavLinkTxt = styled(NavLink)`
   }
 `;
 
-const SidebarNav = styled.nav<{ $isActive: boolean }>`
+const SidebarNav = styled.nav`
   background: white;
   border-left: 2px solid black;
   width: 45vw;
@@ -91,8 +91,7 @@ const SidebarNav = styled.nav<{ $isActive: boolean }>`
   justify-content: center;
   position: fixed;
   top: 0;
-  right: ${(props) => (props.$isActive ? "0" : "-100%")};
-  transition: 500ms;
+  right: 0;
   z-index: 200;
 `;
 
@@ -224,7 +223,8 @@ export default function Navbar() {
         <ThreeBars onClick={() => {setSitebar(prev => !prev)}} />
 
         
-        <SidebarNav $isActive={sidebar} >
+        {sidebar &&
+          <SidebarNav>
           <SidebarWrap>
 
             <SidebarClose>
@@ -276,7 +276,7 @@ export default function Navbar() {
             </SidebarSocialMedia>
 
           </SidebarWrap>
-        </SidebarNav>
+        </SidebarNav>}
 
       </Nav>
     </>
