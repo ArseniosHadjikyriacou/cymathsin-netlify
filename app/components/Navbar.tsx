@@ -40,7 +40,7 @@ const NavMenu = styled.div`
   align-items: center;
   white-space: nowrap;
   height: 100%;
-  @media screen and ((orientation: portrait) or (max-width: 900px)) {
+  @media screen and (orientation: portrait) {
     display: none;
   }
 `;
@@ -49,7 +49,7 @@ const ThreeBars = styled(FaBars)`
   display: none;
   color: #808080;
   transition: 150ms;
-  @media screen and ((orientation: portrait) or (max-width: 900px)) {
+  @media screen and (orientation: portrait) {
     display: block;
     font-size: 7vh;
     cursor: pointer;
@@ -61,12 +61,12 @@ const ThreeBars = styled(FaBars)`
 
 const NavLinkTxt = styled(NavLink)`
   color:rgb(155, 155, 155);
-  font-size: 3vh;
+  font-size: 2vw;
   font-weight: 600;
   display: flex;
   align-items: center;
   text-decoration: none;
-  padding: 0 3vh;
+  padding: 0 2vw;
   height: 100%;
   cursor: pointer;
   transition: 150ms;
@@ -135,7 +135,7 @@ const SidebarLink = styled(NavLink)`
   list-style: none;
   height: 4vh;
   text-decoration: none;
-  font-size: 3vh;
+  font-size: 4vh;
   font-weight: 600;
   transition: 150ms;
   &.active {
