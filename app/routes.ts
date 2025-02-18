@@ -7,7 +7,7 @@ import {
 
 export default [
   
-    layout("components/StaticUI.tsx", [
+    layout("components/StaticUi.tsx", [
       index("routes/home.tsx"),
       route(":slug", "routes/post.tsx"),
       route("about","routes/about.tsx"),
